@@ -10,7 +10,7 @@ body {
 main {
   box-sizing: border-box;
   height: 100vh; height: 100dvh;
-  padding: max(6vmin, 16px) max(7vmin, 16px) max(8vmin, 40px);
+  padding: max(6vmin, 16px) max(7vmin, 16px) max(9vmin, 52px);
   display: flex; align-items: center;
   overflow: hidden;
 }
@@ -24,10 +24,10 @@ main p {
 main p.out { opacity: 0; }
 footer {
   position: fixed; left: 12px; right: 12px; bottom: 10px;
-  display: flex; justify-content: space-between; align-items: baseline; gap: 1.5em;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5em;
   font: 11px/1 ui-monospace, Menlo, monospace;
 }
-#home { margin: 0; opacity: .6; white-space: nowrap; }
+#home { margin: 0; opacity: .6; white-space: nowrap; line-height: 1.45; }   /* the credit, then the landing page's address */
 #num { margin-left: .6em; }
 /* the face name gives way first on a narrow screen */
 #font { opacity: .45; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
