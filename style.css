@@ -1,0 +1,37 @@
+html, body { margin: 0; height: 100%; }
+body {
+  background: #fbf8f1; color: #1b1b1b;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; -webkit-user-select: none;
+  transition: background .25s, color .25s;
+}
+main {
+  box-sizing: border-box;
+  height: 100vh; height: 100dvh;
+  padding: max(6vmin, 16px) max(7vmin, 16px) max(8vmin, 40px);
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+main p {
+  margin: 0; width: 100%;
+  white-space: pre-line;                    /* #31's stat sheet keeps its lines */
+  overflow-wrap: normal; hyphens: manual;   /* words never split; the size shrinks instead */
+  font-size: 32px;            /* fitted to the window by bios.js */
+  opacity: 1; transition: opacity .18s;
+}
+main p.out { opacity: 0; }
+footer {
+  position: fixed; left: 12px; right: 12px; bottom: 10px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1.5em;
+  font: 11px/1 ui-monospace, Menlo, monospace;
+}
+#home { margin: 0; opacity: .6; white-space: nowrap; }
+#num { margin-left: .6em; }
+/* the face name gives way first on a narrow screen */
+#font { opacity: .45; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#home a { color: inherit; padding: 6px 2px; margin: -6px -2px; }   /* a bigger tap target on phones */
+/* without scripts: every bio, one after another */
+.all { max-width: 40rem; margin: 0 auto; padding: 3rem 16px 5rem 3em; font-size: 18px; line-height: 1.5; white-space: pre-line; }
+.all li { margin-bottom: 1.2em; }
