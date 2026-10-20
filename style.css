@@ -10,7 +10,7 @@ body {
 main {
   box-sizing: border-box;
   height: 100vh; height: 100dvh;
-  padding: max(6vmin, 16px) max(7vmin, 16px) calc(max(9vmin, 52px) + 2.9em);   /* room for the three addresses under the credit */
+  padding: max(6vmin, 16px) max(7vmin, 16px) max(9vmin, 52px);
   display: flex; align-items: center;
   overflow: hidden;
 }
@@ -36,11 +36,3 @@ footer {
 .all { max-width: 40rem; margin: 0 auto; padding: 3rem 16px 5rem 3em; font-size: 18px; line-height: 1.5; white-space: pre-line; }
 .all li { margin-bottom: 1.2em; }
 
-/* the addresses: stacked (the site, then the mirror) until there's room for one line across the foot, then the
-   site on the left and the mirror on the right (user, 2026-10-19) */
-@media (min-width: 520px) {
-  .addrs { display: flex; justify-content: space-between; gap: 0 24px; }
-  .addrs br { display: none; }
-  #home { flex: 1; }
-  #font { position: fixed; right: 12px; bottom: calc(10px + 1.45 * 11px); }   /* up beside the credit */
-}
